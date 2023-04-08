@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="styles.css" rel="stylesheet">
+    <title>NavLogin</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#"><i class='bx bxl-flutter'></i> Ocean</a></div>
+            <ul class="links">
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">Sobre</a></li>
+                <li><a href="services">Serviços</a></li>
+                <li><a href="contact">Contato</a></li>
+            </ul>
+            <form action="#" class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class='bx bx-search'></i></button>
+            </form>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="hero">Home</a></li>
+            <li><a href="about">Sobre</a></li>
+            <li><a href="services">Serviços</a></li>
+            <li><a href="contact">Contato</a></li>
+        </div>
+    </header>
+    <div class="container">
+        <div class="login-left">
+            <h2><i class='bx bxl-flutter'></i> Be the change with us</h2>
+            <div class="login-left-text">
+                <h1>Welcome!</h1>
+                <h2 id="subtitulo">For your newest experience.</h2>
+                <p>Fundamentum beatae vitae est quod plenus est praemiis experientiis.</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-google' ></i></a>
+                    <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+
+                </div>
+            </div>
+
+            
+            
+        </div>
+
+        <div class="login-right">
+            <div class="login-right-text">
+                <form action="#">
+                    <h2>Sign In</h2>
+                    
+                    <div class="input-box">
+                        <span class="incon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" required name="email">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="incon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" required name="password">
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Sign In</button>
+
+                    <div class="login-register">
+                        <p>Don't have an accont? <a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+                
+            </div>
+
+            
+        </div>
+
+    </div>
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.constains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
